@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Sedgwick+Ave+Display&family=UnifrakturCook:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="meta.title">Douglas Feliciano — Front-end Developer</title>
+    <meta
+      name="description"
+      data-i18n-attr="content:meta.description"
+      content="Portfolio of Douglas Feliciano, front-end developer and UI/UX designer based in Brazil."
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#0a0a0a',
+              panel: '#0e0e0e',
+              blood: '#e4002b',
+              mute: '#b9aeb0',
+            },
+            fontFamily: {
+              asgard: ['ASGARD', 'UnifrakturCook', 'serif'],
+              sedgwick: ['Sedgwick Ave Display', 'cursive'],
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="src/input.css" />
+  </head>
+  <body class="overflow-x-hidden bg-ink font-sans text-white antialiased">
+    <!-- LANGUAGE TOGGLE -->
+    <div
+      role="group"
+      aria-label="Language"
+      data-i18n-attr="aria-label:lang.label"
+      class="fixed right-4 top-4 z-50 flex items-center gap-1 rounded-full border border-white/20 bg-black/60 p-1 text-xs font-medium backdrop-blur"
+    >
+      <button type="button" data-set-lang="en" aria-label="English" aria-pressed="true" class="rounded-full px-3 py-1 text-white/50 transition aria-pressed:bg-white aria-pressed:text-black">EN</button>
+      <button type="button" data-set-lang="pt" aria-label="Português" aria-pressed="false" class="rounded-full px-3 py-1 text-white/50 transition aria-pressed:bg-white aria-pressed:text-black">PT</button>
+    </div>
+    <!-- HERO -->
+    <header
+      class="relative isolate flex flex-col items-center px-6 pb-48 pt-48 text-center md:pb-72"
+    >
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="relative">
+        <span
+          class="absolute -top-16 -left-20 -rotate-12 font-sedgwick text-2xl md:text-3xl"
+          >2026</span
+        >
+        <h1
+          class="font-asgard text-[clamp(4.5rem,15vw,9.5rem)] uppercase leading-[.85]"
+        >
+          <span class="title-line block text-left">Port</span>
+          <span class="title-line block pl-[.7em] text-left">Folio</span>
+        </h1>
+      </div>
+
+      <div
+        class="mt-12 flex w-full max-w-[1100px] items-center justify-between font-sedgwick text-[clamp(1.75rem,4vw,3.5rem)] uppercase"
+      >
+        <span data-i18n="hero.role1">Front-end</span>
+        <span class="h-3 w-3 rotate-45 bg-blood" aria-hidden="true"></span>
+        <span data-i18n="hero.role2">Developer</span>
+      </div>
+      <p class="mt-4 text-xs text-mute" data-i18n="hero.tagline">
+        Designing and developing bold digital experiences.
+      </p>
+    </header>
+
+    <main>
+      <!-- ABOUT -->
+      <section
+        id="about"
+        class="mx-auto w-[calc(100%-2rem)] max-w-[1264px] rounded-md  px-6 py-20 md:px-0 md:py-28"
+      >
+        <div class="grid items-center gap-16 md:grid-cols-[57fr_43fr]">
+          <div
+            class="relative isolate mx-auto aspect-square w-[min(26rem,80%)]"
+          >
+            <figure
+              class="polaroid absolute inset-0 z-10 border-[10px] border-white bg-neutral-800"
+            >
+              <img
+                src="./assets/images/FOTO-PERFIL.jpg"
+                alt="Black and white portrait of a masked hero in a dark suit"
+                data-i18n-attr="alt:about.photoAlt"
+                class="h-full w-full object-cover"
+                onerror="this.style.display = 'none'"
+              />
+            </figure>
+
+            <svg
+              <svg
+  class="pointer-events-none absolute -inset-[15%] z-0 h-[130%] w-[130%] overflow-visible"
+              viewBox="0 0 416 416"
+              fill="none"
+              stroke="#e4002b"
+              stroke-width="12"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <ellipse
+  cx="75"
+  cy="135"
+  rx="82"
+  ry="155"
+  transform="rotate(28 75 135)"
+/>
+
+<ellipse
+  cx="335"
+  cy="350"
+  rx="155"
+  ry="82"
+  transform="rotate(-35 335 350)"
+/>
+            </svg>
+          </div>
+
+          <div class="flex flex-col gap-5 md:pr-16">
+            <h2
+              class="font-sedgwick text-[clamp(3.5rem,8vw,7rem)] uppercase leading-[.9]"
+              data-i18n-html="about.title"
+            >
+              About<br />Me!!!
+            </h2>
+            <p class="text-sm md:text-base" data-i18n-html="about.intro">
+              Hi, I'm Douglas Feliziano.<br />I'm a front-end developer and
+              UI/UX designer based in Brazil.
+            </p>
+            <p class="font-sedgwick text-xl uppercase text-blood" data-i18n="about.tag">
+              Creative &amp; curious
+            </p>
+            <p class="max-w-md text-sm leading-relaxed md:text-base" data-i18n="about.bio">
+              I'm a Front-End Developer focused on building modern, responsive, and visually engaging web experiences. With skills in HTML, CSS, JavaScript, Tailwind CSS, and Figma, I combine development and UI/UX design to create intuitive interfaces with strong visual identities. I'm continuously refining my skills and turning ideas into functional, well-crafted digital products.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section
+        id="projects"
+        class="mx-auto mt-30 w-[calc(100%-2rem)] max-w-[1264px] md:mt-52"
+      >
+        <div class="relative md:pl-[10%]">
+          <span
+            class="inline-block -rotate-3 font-sedgwick text-2xl uppercase md:-ml-[9.5rem]"
+            data-i18n="projects.kicker"
+            >My work</span
+          >
+          <h2
+            class="font-asgard text-[clamp(3.25rem,9vw,6.5rem)] uppercase leading-[.85]"
+          >
+            <span class="block" data-i18n="projects.line1">Selected</span>
+            <span class="block pl-[.7em]" data-i18n="projects.line2">Projects</span>
+          </h2>
+          <p
+            class="mt-6 text-xs text-mute md:absolute md:bottom-0 md:right-0 md:mt-0"
+            data-i18n="projects.subtitle"
+          >
+            A selection of responsive interfaces built to solve real problems.
+          </p>
+        </div>
+
+        <ul id="project-list" class="mt-16 space-y-28 md:mt-20"></ul>
+      </section>
+
+      <!--project-->
+
+    <section
+    id="focus-carousel"
+    role="region"
+    aria-roledescription="carousel"
+    aria-label="Galeria de imagens"
+    data-i18n-attr="aria-label:carousel.label"
+    tabindex="0"
+    class="flex h-[100svh] w-full flex-col items-center justify-center overflow-hidden p-6 outline-none focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-black/20"
+  >
+    <div
+      data-fc="stage"
+      class="relative min-h-0 w-full flex-1 cursor-grab touch-pan-y select-none active:cursor-grabbing"
+    ></div>
+  </section>
+
+      <!-- Footer -->
+      <footer class="border-t border-white/10 bg-ink pt-16 pb-12">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 md:col-span-2">
+
+              <p class="text-white/50 text-sm max-w-md leading-relaxed" data-i18n="footer.tagline">
+                Design. Code. Impact.
+Building digital experiences that turn bold ideas into reality.
+              </p>
+              <div class="mt-8 flex gap-4">
+                <a href="https://wa.me/5562992964890?text=Olá!%20Vim%20pelo%20seu%20portfólio%20e%20gostaria%20de%20conhecer%20mais%20sobre%20seus%20serviços." class="text-white/40 hover:text-white transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.52 3.48a11.8 11.8 0 0 0-18.3 14.2L1 23l5.48-1.44a11.8 11.8 0 0 0 14.04-18.08Z"></path>
+                    <path d="M8.1 7.2c.2-.5.5-.5.8-.5h.6c.2 0 .4 0 .6.5l.9 2.1c.1.3.1.5-.1.7l-.7.8c-.2.2-.2.4 0 .7.6 1.2 1.6 2.2 2.8 2.8.3.2.5.2.7 0l.8-.9c.2-.2.4-.2.7-.1l2.1 1c.3.1.5.3.5.5s-.2 1.1-.7 1.5c-.5.5-1.2.7-2 .6-.9-.1-2.2-.6-3.7-1.5-2.2-1.3-3.6-3.7-3.7-3.9-.1-.2-1-1.3-1-2.5s.6-1.7.8-2z"></path>
+                  </svg>
+                </a>
+                <a href="#" class="text-white/40 hover:text-white transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/dg-feliciano-dev/" class="text-white/40 hover:text-white transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect width="4" height="12" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-white font-medium mb-6" data-i18n="footer.services">Services</h4>
+              <ul class="space-y-4 text-sm text-white/50">
+                <li>
+                  <a href="#" class="hover:text-blood transition" data-i18n="footer.web">
+                    Web Design
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-blood transition" data-i18n="footer.dev">
+                    Development
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-blood transition" data-i18n="footer.seo">
+                    SEO &amp; Optimization
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-blood transition" data-i18n="footer.content">
+                    Content Strategy
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-white font-medium mb-6" data-i18n="footer.company">Company</h4>
+              <ul class="space-y-4 text-sm text-white/50">
+                <li>
+                  <a href="#" class="hover:text-blood transition" data-i18n="footer.about">
+                    About Us
+                  </a>
+                </li>
+                
+                </li>
+              
+                <li>
+                  <a href="https://wa.me/5562992964890?text=Olá!%20Vim%20pelo%20seu%20portfólio%20e%20gostaria%20de%20conhecer%20mais%20sobre%20seus%20serviços." target="_blank" rel="noopener noreferrer" class="hover:text-blood transition" data-i18n="footer.contact">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+         <div class="h-32 border-t border-white/10 flex items-center justify-center">
+            <p class="text-xs text-white/30" data-i18n="footer.rights">
+              © 2026 Feliciano Developer. All rights reserved.
+            </p>
+           
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    </main>
+
+  <script src="./js/script.js"></script>
+  </body>
+</html>
